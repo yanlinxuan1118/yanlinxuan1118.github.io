@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册表单</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        .radio-group, .checkbox-group {
+            margin: 10px 0;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        .file-upload {
+            margin: 10px 0;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .email-container {
+            display: flex;
+        }
+        .email-input {
+            flex: 1;
+        }
+        .email-suffix {
+            margin-left: 10px;
+            width: 120px;
+        }
+        select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2>注册表单</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="nickname">昵称：</label>
+            <input type="text" id="nickname" name="nickname" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">邮箱：</label>
+            <div class="email-container">
+                <input type="text" id="email" name="email" class="email-input" required>
+                <select class="email-suffix" name="email_suffix">
+                    <option value="@qq.com">@qq.com</option>
+                    <option value="@163.com">@163.com</option>
+                    <option value="@gmail.com">@gmail.com</option>
+                    <option value="@sina.com">@sina.com</option>
+                    <option value="@outlook.com">@outlook.com</option>
+                    <option value="@yahoo.com">@yahoo.com</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>性别：</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male"> 男</label>
+                <label><input type="radio" name="gender" value="female"> 女</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>爱好：</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="hobby" value="travel"> 旅游</label>
+                <label><input type="checkbox" name="hobby" value="photography"> 摄影</label>
+                <label><input type="checkbox" name="hobby" value="sports"> 运动</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="bio">个人简介：</label>
+            <textarea id="bio" name="bio"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>上传个人照片：</label>
+            <div class="file-upload">
+                <input type="file" id="photo" name="photo">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="submit-btn">立即注册</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('photo').addEventListener('change', function(e) {
+            const fileName = e.target.files.length ? e.target.files[0].name : '未选择文件';
+            document.getElementById('file-status').textContent = fileName;
+        });
+    </script>
+</body>
+</html>
