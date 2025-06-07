@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上海对外经贸大学</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft YaHei", sans-serif; }
+    body { background-color: #f5f5f5; }
+    .container { width: 1200px; margin: 0 auto; }
+
+    .top-bar { background-color: #e6f7ff; height: 40px; border-bottom: 1px solid #cce6ff; }
+    .top-nav { display: flex; padding: 10px 0; }
+    .top-nav-item { margin-right: 20px; color: #005b99; font-weight: bold; }
+    .top-nav-item:not(:last-child)::after { content: "|"; margin-left: 20px; color: #99c2ff; }
+
+    .header-container { display: flex; background: linear-gradient(to right, #003366, #1a4d80); padding: 15px 0; }
+    .school-name { flex: 0 0 280px; color: white; text-align: center; padding: 0 20px; border-right: 1px solid rgba(255,255,255,0.3); }
+    .chinese-name { font-size: 24px; font-weight: bold; margin-bottom: 5px; }
+    .english-name { font-size: 12px; color: rgba(255,255,255,0.8); }
+    .main-nav { flex: 1; }
+    .nav-items { display: flex; justify-content: space-around; align-items: center; height: 100%; background-color: #e6f7ff; border: 1px solid #cce6ff; border-radius: 4px; }
+    .nav-item { font-size: 16px; padding: 8px 12px; color: #333; transition: all 0.3s; }
+    .nav-item:hover { color: #005b99; }
+
+    .main-content { padding: 20px 0; margin-bottom: 60px;}
+    .section-title { font-size: 20px; color: #005ea7; font-weight: bold; margin-bottom: 15px; padding: 10px 15px; background-color: #e6f7ff; border-left: 5px solid #005b99; }
+    
+    .news-row { display: flex; gap: 20px; margin-bottom: 20px; }
+    .news-col { display: flex; gap: 10px; }
+
+    .color-block { 
+      border-radius: 4px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+      border: 1px solid #e6f2ff;
+    }
+    
+    .blue-block { flex: 0 0 48%; min-height: 200px; background-color: #007bff; } 
+    .news-col.red-col { 
+      flex: 0 0 50%; 
+      flex-direction: row; 
+      min-height: 300px; 
+    }
+    .red-block { 
+      flex: 1;
+      min-height: 300px; 
+      background-color: #dc3545; 
+    }
+    
+    .green-block { 
+      flex: 1; 
+      min-height: 300px;
+      background-color: #28a745; 
+    }
+    .yellow-block { 
+      flex: 0 0 50%; 
+      min-height: 300px;
+      background-color: #ffc107; 
+      margin-left: auto; 
+    }
+
+    .footer {
+      background-color: #333333;
+      height: 80px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar"><div class="container"><div class="top-nav">
+    <div class="top-nav-item">学生</div>
+    <div class="top-nav-item">教工</div>
+    <div class="top-nav-item">校友</div>
+    <div class="top-nav-item">访客</div>
+  </div></div></div>
+  <div class="container"><div class="header-container">
+    <div class="school-name"><div class="chinese-name">上海对外经贸大学</div><div class="english-name">SHANGHAI UNIVERSITY OF INTERNATIONAL BUSINESS AND ECONOMICS</div></div>
+    <div class="main-nav"><div class="nav-items">
+      <div class="nav-item">学校概况</div><div class="nav-item">机构设置</div><div class="nav-item">师资队伍</div>
+      <div class="nav-item">科学研究</div><div class="nav-item">人才培养</div><div class="nav-item">招生就业</div>
+      <div class="nav-item">国际交流</div><div class="nav-item">公开事项</div>
+    </div></div>
+  </div></div>
+
+  <div class="container main-content">
+    <div class="section-title">校园要闻</div>
+    
+    <div class="news-row">
+      <div class="news-block color-block blue-block"></div>
+      <div class="news-col red-col">
+        <div class="news-block color-block red-block"></div>
+        <div class="news-block color-block red-block"></div>
+      </div>
+    </div>
+
+    <div class="news-row">
+      <div class="news-col" style="flex: 0 0 48%; gap: 10px; flex-direction: row;">
+        <div class="news-block color-block green-block"></div>
+        <div class="news-block color-block green-block"></div>
+      </div>
+      
+      <div class="news-block color-block yellow-block"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>版权所有 © 2023 上海对外经贸大学</p>
+    <p>地址：上海市松江区文翔路1900号 邮编：201620</p>
+    <p>电话：021-67702000 沪ICP备05052047号</p>
+  </div>
+</body>
+</html>
