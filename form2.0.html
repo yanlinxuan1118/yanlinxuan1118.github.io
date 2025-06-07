@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册表单</title> 
+    <style>
+        form{
+          border: 2px solid #00000019; 
+          padding:20px;
+          width:350px;
+          margin: 0 auto;
+        }
+        hr {
+          border: 1px solid #0000009d;
+          margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    昵称：<input type="text" name="username" id=""><br>
+    密码：<input type="password" name="password" id=""><br>
+    邮箱：<input type="e-mail" name="e-mail" id="">
+    <select>
+        <option value="@qq.com">@qq.com</option>
+        <option value="@163.com">@163.com</option>
+        <option value="@gmail.com">@gmail.com</option>
+        <option value="@sina.com">@sina.com</option>
+        <option value="@outlook.com">@outlook.com</option>
+        <option value="@yahoo.com">@yahoo.com</option>
+    </select>
+    <br>
+    性别：<input type="radio" name="sex" value="取值" checked/>男
+    <input type="radio" name="sex" value="取值" checked/>女<br>
+    爱好：<input type="checkbox" name="hobby" value="取值" />旅游
+    <input type="checkbox" name="hobby" value="取值" />摄影
+    <input type="checkbox" name="hobby" value="取值" />运动<br>
+    个人简介：<br><textarea name="" id="" cols="30" rows="10"></textarea><br>
+    上传个人照片：<br><input type="file" /><br>
+    <hr>
+    <center><input type="submit" value="立即注册" /></center></form>
+</body>
+</html>
