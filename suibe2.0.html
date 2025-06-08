@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suibe2.0</title>
+    <style>
+        .container {
+            width: 80%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            background-color: #00aeff; 
+            margin-bottom: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .header .container {
+            height: 40px;
+            background-color: #0044ff; 
+        }
+
+        .main {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .left {
+            height: 900px;
+            flex: auto;
+            background-color: #80d4eb4e; 
+            margin-bottom: 10px;
+            margin-right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .avgcard {
+            flex: auto;
+            height: 200px;
+            background-color: #00fff2; 
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            width: 260px;
+        }
+
+        .card {
+            height: 200px;
+            background-color: #bf38f844; 
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .footer {
+            background-color: #adadad; 
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer .container {
+            background-color: #242424; 
+            height: 40px;
+        }
+
+        .goback {
+            width: 40px;
+            height: 40px;
+            background-color: hsl(332, 91%, 69%);
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 50%;
+        }
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            background-color: #bf38f8; 
+            position: absolute;
+            left: 80px;
+            top: 150px;
+            z-index: 99;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container"></div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="left">
+                <div class="avgcard"></div>
+                <div class="avgcard"></div>
+                <div class="avgcard"></div>
+                <div class="avgcard"></div>
+                <div class="avgcard"></div>
+                <div class="avgcard"></div>
+                <div class="avgcard"></div>
+            </div>
+            <div class="right">
+                <div class="card">
+                    <div class="circle"></div>
+                </div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container"></div>
+    </div>
+    <div class="goback"></div>
+</body>
+</html>
